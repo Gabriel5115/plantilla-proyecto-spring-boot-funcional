@@ -20,6 +20,8 @@ app:
       ruta2: /ruta2
       buscarAutobusId: /autobus/{id}
       save: /save
+      create: /create
+      listarAutobusMarca: /listar/{marcas}
 
 ################################################################################
 ## LOGGER

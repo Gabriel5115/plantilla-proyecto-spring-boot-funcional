@@ -1,5 +1,8 @@
 package com.gabi.prueba.proyectoBase.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,6 +38,19 @@ private static final Logger log = LoggerFactory.getLogger(AutobusesServiceImpl.c
 		dto.setModelos(autobus.getModelos());
 		
 		return dto;
+		
+	}
+	
+	public static List<AutobusesDto> getListaAutobuses(List<AutobusesEntity> entity){
+		
+		log.info("getListaAutobuses Mapeo");
+		
+		List<AutobusesDto> autobuses = new ArrayList<>();
+		for (AutobusesEntity autobusesEntity : entity) {
+			autobuses.add(getAutobus(autobusesEntity));
+		}
+		
+		return autobuses;
 		
 	}
 }
