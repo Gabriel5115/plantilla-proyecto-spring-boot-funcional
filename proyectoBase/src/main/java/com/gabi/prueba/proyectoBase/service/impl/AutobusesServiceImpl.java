@@ -20,13 +20,13 @@ public class AutobusesServiceImpl implements IAutobusesService {
 	AutobusesRepository autobusesRepository;
 	
 	@Override
-	public AutobusesResponse searchAutobus(long id) {
+	public AutobusesResponse searchAutobus(String id) {
 
 		log.info("Buscamos el autobus con id {}", id);
 
 		AutobusesResponse response = new AutobusesResponse();
 
-		AutobusesEntity autobusesEntity = autobusesRepository.findById(id);
+		AutobusesEntity autobusesEntity = autobusesRepository.findByIdAutobus(id);
 
 		response.setAutobusDto(MapperDTO.getAutobuses(autobusesEntity));
 

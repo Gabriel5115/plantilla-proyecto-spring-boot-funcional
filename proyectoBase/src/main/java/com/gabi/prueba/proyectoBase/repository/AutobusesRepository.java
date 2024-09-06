@@ -10,5 +10,5 @@ import com.gabi.prueba.proyectoBase.entity.AutobusesEntity;
 
 public interface AutobusesRepository extends CrudRepository<AutobusesEntity, Long>{
 	
-	AutobusesEntity findById(long id);
+	AutobusesEntity findByIdAutobus(String id);
 }

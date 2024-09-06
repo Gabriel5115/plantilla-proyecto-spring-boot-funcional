@@ -4,5 +4,5 @@ import com.gabi.prueba.proyectoBase.dto.AutobusesResponse;
 
 public interface IAutobusesService {
 	
-	AutobusesResponse searchAutobus(long id);
+	AutobusesResponse searchAutobus(String id);
 }

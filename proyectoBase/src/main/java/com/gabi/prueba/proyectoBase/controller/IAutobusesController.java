@@ -14,6 +14,6 @@ public interface IAutobusesController {
 	 * Metodo encargado de buscar todos los usurarios de la BBDD
 	 */
 	
-	ResponseEntity<AutobusesResponse> findAutobuses(@PathVariable long id);
+	ResponseEntity<AutobusesResponse> findAutobuses(@PathVariable String id);
 	
 }

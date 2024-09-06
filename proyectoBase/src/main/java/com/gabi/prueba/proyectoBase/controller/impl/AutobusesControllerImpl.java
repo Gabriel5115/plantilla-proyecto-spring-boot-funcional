@@ -38,7 +38,7 @@ public class AutobusesControllerImpl implements IAutobusesController{
 			@ApiResponse(responseCode = "500", description = "Internal server error") })
 	@Override
 	@GetMapping("${app.rest.endpoints.buscarAutobusId}")
-	public ResponseEntity<AutobusesResponse> findAutobuses(@PathVariable long id) {
+	public ResponseEntity<AutobusesResponse> findAutobuses(@PathVariable String id) {
 	
 		return ResponseEntity.ok(iAutobusesService.searchAutobus(id));
 	}

@@ -26,7 +26,7 @@ private static final Logger log = LoggerFactory.getLogger(AutobusesServiceImpl.c
 	
 	public static AutobusesDto getAutobus(AutobusesEntity autobus) {
 		
-		log.info("MapperDTO getHistorico");
+		log.info("MapperDTO getAutobus");
 		
 		AutobusesDto dto = new AutobusesDto();
 		dto.setIdAutobus(autobus.getIdAutobus());
