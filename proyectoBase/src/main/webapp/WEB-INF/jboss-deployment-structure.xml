@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jboss-deployment-structure>
+	<deployment>
+		<exclude-subsystems>
+			<subsystem name="jpa" />
+			<subsystem name="logging" />
+		</exclude-subsystems>
+		<exclusions>
+			<module name="org.jboss.logging" />
+			<module name="javaee.api" />
+			<!-- PARA BLOQUEAR EL LOG PROPIO DEL JBOSS Y MANTENER NUESTRA CONFIGURACION -->
+			<!-- En principio vale con estos dos primeros y el org.jboss.logging de -->
+			<!-- encima. Tambien vale unicamente con el subsystem logging -->
+			<module name="org.jboss.logging.jul-to-slf4j-stub" />
+			<module name="org.slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.apache.commons.logging" />
+			<module name="org.apache.log4j" />
+			<module name="org.jboss.logmanager" />
+			<module name="org.jboss.logmanager.log4j" />
+		</exclusions>
+	</deployment>
+</jboss-deployment-structure>
