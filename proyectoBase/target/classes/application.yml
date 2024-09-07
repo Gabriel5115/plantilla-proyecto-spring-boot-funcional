@@ -18,7 +18,7 @@ app:
     endpoints: 
       ruta1: /ruta1
       ruta2: /ruta2
-      buscarAutobusId: /autobus/{id}
+      buscarConductorNum: /conductor/{numEmpl}
 
 ################################################################################
 ## LOGGER
