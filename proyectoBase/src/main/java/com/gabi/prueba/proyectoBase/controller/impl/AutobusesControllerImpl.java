@@ -16,6 +16,7 @@ import com.gabi.prueba.proyectoBase.controller.IAutobusesController;
 import com.gabi.prueba.proyectoBase.dto.AutobusesDto;
 import com.gabi.prueba.proyectoBase.dto.AutobusesListResponse;
 import com.gabi.prueba.proyectoBase.dto.AutobusesResponse;
+import com.gabi.prueba.proyectoBase.dto.LoginDto;
 import com.gabi.prueba.proyectoBase.exception.CustomException;
 import com.gabi.prueba.proyectoBase.service.IAutobusesService;
 
@@ -99,5 +100,6 @@ public class AutobusesControllerImpl implements IAutobusesController{
 		
 		return ResponseEntity.ok(iAutobusesService.listarAutobus(marcas));
 	}
+	
 
 }

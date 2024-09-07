@@ -20,4 +20,7 @@ public class LoginEntity {
 	
 	@Column(name = "PASSWORD")
 	private String password;
+	
+	@Column(name = "ROL")
+	private String rol;
 }

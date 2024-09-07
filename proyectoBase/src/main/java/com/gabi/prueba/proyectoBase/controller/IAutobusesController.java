@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.gabi.prueba.proyectoBase.dto.AutobusesDto;
 import com.gabi.prueba.proyectoBase.dto.AutobusesListResponse;
 import com.gabi.prueba.proyectoBase.dto.AutobusesResponse;
+import com.gabi.prueba.proyectoBase.dto.LoginDto;
 import com.gabi.prueba.proyectoBase.exception.CustomException;
 
 
@@ -25,4 +26,6 @@ public interface IAutobusesController {
 	ResponseEntity<Void>create(@RequestBody AutobusesDto autobus) throws CustomException;
 	
 	ResponseEntity<AutobusesListResponse> listaMarca(@PathVariable String marcas) throws CustomException;
+	
+	
 }
