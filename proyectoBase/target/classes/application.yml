@@ -1,16 +1,16 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/EMTBBDD
-    username: coches
-    password: uxOo_YhJXzxAF3uZ
+    url: jdbc:mysql://10.87.10.4:3306/OBDGTNDESA
+    username: obdgtndesa
+    password: Mygtn2022#
   jpa:
     hibernate:
       ddl-auto: none
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     properties:
       hibernate:
-        default_schema: EMTBBDD
+        default_schema: OBDGTNDESA
 
 app:
   nombreProyecto: proyectoBase
@@ -19,9 +19,7 @@ app:
       ruta1: /ruta1
       ruta2: /ruta2
       buscarAutobusId: /autobus/{id}
-      save: /save
-      create: /create
-      listarAutobusMarca: /listar/{marcas}
+      login: /login
 
 ################################################################################
 ## LOGGER
@@ -34,7 +32,7 @@ logging:
     file: "%d %-5level [%thread] %logger : %msg%n"
   level:
     root: ERROR
-    com.gabi: TRACE
+    com.minsait: TRACE
 
    
 

@@ -6,6 +6,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/docs"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-test-sources/test-annotations"/>
         <property name="context-root" value="proyectoBase"/>
         <property name="java-output-path" value="/proyectoBase/target/classes"/>
         <property name="component.exclusion.patterns" value="WEB-INF/classes/logback*"/>
