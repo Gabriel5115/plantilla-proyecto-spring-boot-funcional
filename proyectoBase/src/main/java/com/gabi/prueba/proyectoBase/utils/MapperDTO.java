@@ -2,6 +2,7 @@ package com.gabi.prueba.proyectoBase.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,7 +57,7 @@ private static final Logger log = LoggerFactory.getLogger(AutobusesServiceImpl.c
 		return autobuses;
 	}
 
-	public static ConductorDto getConductores(ConductorEntity conductor) {
+	public static ConductorDto getConductores(Optional<ConductorEntity> conductor) {
 		
 		log.info("MapperDTO Conductores");
 		
@@ -69,18 +70,18 @@ private static final Logger log = LoggerFactory.getLogger(AutobusesServiceImpl.c
 		
 	}
 	
-public static ConductorDto getConductor(ConductorEntity conductor) {
+public static ConductorDto getConductor(Optional<ConductorEntity> conductor) {
 		
 		log.info("MapperDTO getHistorico");
 		
 		ConductorDto dto = new ConductorDto();
-		dto.setDni(conductor.getDni());
-		dto.setNombre(conductor.getNombre());
-		dto.setApellidos(conductor.getApellidos());
-		dto.setNumeroEmpleado(conductor.getNumeroEmpleado());
-		dto.setTurno(conductor.getTurno());
-		dto.setFichajeInicio(conductor.getFichajeInicio());
-		dto.setFichajeFin(conductor.getFichajeFin());
+		dto.setDni(conductor.get().getDni());
+		dto.setNombre(conductor.get().getNombre());
+		dto.setApellidos(conductor.get().getApellidos());
+		dto.setNumeroEmpleado(conductor.get().getNumeroEmpleado());
+		dto.setTurno(conductor.get().getTurno());
+		dto.setFichajeInicio(conductor.get().getFichajeInicio());
+		dto.setFichajeFin(conductor.get().getFichajeFin());
 		
 		
 		return dto;

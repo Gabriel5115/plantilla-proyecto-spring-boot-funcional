@@ -23,7 +23,7 @@ app:
       create: /create
       listarAutobusMarca: /listar/{marcas}
       login: /login
-      buscarConductorNum: /conductor/{numEmpl}
+      buscarConductorNum: /conductor/{numeroEmpleado}
 
 
 ################################################################################
