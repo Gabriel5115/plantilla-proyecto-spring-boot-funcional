@@ -4,7 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.gabi.prueba.proyectoBase.dto.AutobusesDto;
+import com.gabi.prueba.proyectoBase.dto.UsuarioDTO;
 import com.gabi.prueba.proyectoBase.entity.AutobusesEntity;
+import com.gabi.prueba.proyectoBase.entity.UsuarioEntity;
 import com.gabi.prueba.proyectoBase.service.impl.AutobusesServiceImpl;
 
 public class MapperDTO {
@@ -37,4 +39,28 @@ private static final Logger log = LoggerFactory.getLogger(AutobusesServiceImpl.c
 		return dto;
 		
 	}
+	
+	public static UsuarioDTO getUsuarios(UsuarioEntity user) {
+		
+		UsuarioDTO usuario = new UsuarioDTO();
+		
+		usuario = getUsuario(user);
+		
+		return usuario;
+	}
+	
+	public static UsuarioDTO getUsuario(UsuarioEntity user) {
+		
+		log.info("Mapper DTO getUsuario");
+		
+		
+		UsuarioDTO dto = new UsuarioDTO();
+		dto.setIdUsuario(user.getIdUsuario());
+		dto.setUsername(user.getUsername());
+		dto.setRole(user.getRole());
+		
+		return dto;
+		
+	}
+	
 }
