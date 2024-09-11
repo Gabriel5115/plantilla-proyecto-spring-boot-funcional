@@ -24,7 +24,7 @@ app:
       listarAutobusMarca: /listar/{marcas}
       login: /login
       buscarConductorNum: /conductor/{numeroEmpleado}
-
+      buscarUsuarioId: /usuario/{id}
 
 ################################################################################
 ## LOGGER
